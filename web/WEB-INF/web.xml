@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee            http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <!-- o nome do servlet, configurado em servlet-name e utilizado internamente apenas 
+       relacionando a classe do Servlet ao URL-PATTERN do servlet, o seja, a url
+       que utilizaremos para acessar o Servlet.
+       Ex: http://localhost:8080/[context-name]/catalogoProdutos
+  -->
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>Servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Catalogo</servlet-name>
+        <servlet-class>Servlet.Catalogo</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Cesta</servlet-name>
+        <servlet-class>Servlet.Cesta</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>Servlet.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/acesso</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Catalogo</servlet-name>
+        <url-pattern>/catalogoProdutos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Cesta</servlet-name>
+        <url-pattern>/adicionarProdutoCarrinho</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+</web-app>
